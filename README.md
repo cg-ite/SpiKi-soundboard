@@ -1,6 +1,9 @@
 # Sound Board
 
-![cover](./assets/sounds.jpg)
+Forked from https://github.com/kateFrontend/js-sound-board
+
+## Why
+Because our kindergarten needs a soundboard for St. Martin.
 
 ## 🦉 Main information
 

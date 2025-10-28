@@ -5,18 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sound Board</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        section {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            margin-top: 8%;
+        }
+
+        .btn {
+            background-color: rebeccapurple;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            margin: 1rem;
+            padding: 1.5rem 3rem;
+            font-size: 1.2rem;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+    </style>
 </head>
 <body>
-    <audio id="applause" src="sounds/applause.mp3"></audio>
-    <audio id="boo" src="sounds/boo.mp3"></audio>
-    <audio id="gasp" src="sounds/gasp.mp3"></audio>
-    <audio id="tada" src="sounds/tada.mp3"></audio>
-    <audio id="victory" src="sounds/victory.mp3"></audio>
-    <audio id="wrong" src="sounds/wrong.mp3"></audio>
+<audio id="applause" src="sounds/applause.mp3"></audio>
+<audio id="boo" src="sounds/boo.mp3"></audio>
+<audio id="gasp" src="sounds/gasp.mp3"></audio>
+<audio id="tada" src="sounds/tada.mp3"></audio>
+<audio id="victory" src="sounds/victory.mp3"></audio>
+<audio id="wrong" src="sounds/wrong.mp3"></audio>
+<audio id="B" src="sounds/wrong.mp3"></audio>
+
+<section>
+<h1>Spielkiste St. Martin 2025</h1></section>
+
+<section>
 
     <div id="buttons"></div>
+</section>
+<section>
 
-    <script src="script.js"></script>
+    <div id="buttons"></div>
+</section>
+    <script>
+        const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong']
+
+        sounds.forEach(sound => {
+            const btn = document.createElement('button')
+            btn.classList.add('btn')
+
+            btn.innerText = sound
+
+            btn.addEventListener('click', () => {
+                stopSongs()
+
+                document.getElementById(sound).play()
+            })
+
+            document.getElementById('buttons').appendChild(btn)
+        })
+
+        function stopSongs() {
+            sounds.forEach(sound => {
+                const song = document.getElementById(sound)
+
+                song.pause()
+                song.currentTime = 0;
+            })
+        }
+    </script>
 </body>
 </html>
