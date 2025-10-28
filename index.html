@@ -44,13 +44,24 @@
     </style>
 </head>
 <body>
-<audio id="applause" src="sounds/applause.mp3"></audio>
-<audio id="boo" src="sounds/boo.mp3"></audio>
-<audio id="gasp" src="sounds/gasp.mp3"></audio>
-<audio id="tada" src="sounds/tada.mp3"></audio>
-<audio id="victory" src="sounds/victory.mp3"></audio>
-<audio id="wrong" src="sounds/wrong.mp3"></audio>
-<audio id="B" src="sounds/wrong.mp3"></audio>
+<audio id="Bild_1_-_Pferd_Galopp" src="sounds/Bild_1_-_Pferd_Galopp.mp3"></audio>
+<audio id="Bild_2_-_Pferd_schnauben" src="sounds/Bild_2_-_Pferd_schnauben.mp3"></audio>
+<audio id="Bild_2_-_Pferd_wiehern" src="sounds/Bild_2_-_Pferd_wiehern.mp3"></audio>
+<audio id="Bild_2_-_Winter_Wind" src="sounds/Bild_2_-_Winter_Wind.mp3"></audio>
+<audio id="Bild_3_-_Kirchturmuhr_laeutet" src="sounds/Bild_3_-_Kirchturmuhr_laeutet.mp3"></audio>
+<audio id="Bild_3_-_Kirchturmuhr_schlaegt_6" src="sounds/Bild_3_-_Kirchturmuhr_schlaegt_6.mp3"></audio>
+<audio id="Bild_3_-_Kirchturmuhr_schlaegt_oft" src="sounds/Bild_3_-_Kirchturmuhr_schlaegt_oft.mp3"></audio>
+<audio id="Bild_3_-_Stadt_Winter" src="sounds/Bild_3_-_Stadt_Winter.mp3"></audio>
+<audio id="Bild_4_-_Pferd_Galopp_langsamer" src="sounds/Bild_4_-_Pferd_Galopp_langsamer.mp3"></audio>
+<audio id="Bild_4_-_Winter_stuermischer_Wind" src="sounds/Bild_4_-_Winter_stuermischer_Wind.mp3"></audio>
+<audio id="Bild_5_-_Klopfen_1" src="sounds/Bild_5_-_Klopfen_1.mp3"></audio>
+<audio id="Bild_5_-_Klopfen_2" src="sounds/Bild_5_-_Klopfen_2.mp3"></audio>
+<audio id="Bild_5_-_Klopfen_3" src="sounds/Bild_5_-_Klopfen_3.mp3"></audio>
+<audio id="Bild_7_-_Mantel_add-on_M" src="sounds/Bild_7_-_Mantel_add-on_M.mp3"></audio>
+<audio id="Bild_7_-_Mantel_Bewegung" src="sounds/Bild_7_-_Mantel_Bewegung.mp3"></audio>
+<audio id="Bild_7_-_Mantel_zerteilen" src="sounds/Bild_7_-_Mantel_zerteilen.mp3"></audio>
+<audio id="Bild_7_-_Schwert_zuecken" src="sounds/Bild_7_-_Schwert_zuecken.mp3"></audio>
+<audio id="Raben" src="sounds/Raben.mp3"></audio>
 
 <section>
 <h1>Spielkiste St. Martin 2025</h1></section>
@@ -59,32 +70,31 @@
 
     <div id="buttons"></div>
 </section>
-<section>
 
-    <div id="buttons"></div>
-</section>
     <script>
-        const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong']
+      const sounds = [
+        "Bild_1_-_Pferd_Galopp",
+        "Bild_2_-_Pferd_schnauben",
+        "Bild_2_-_Pferd_wiehern",
+        "Bild_2_-_Winter_Wind",
+        "Bild_3_-_Kirchturmuhr_laeutet",
+        "Bild_3_-_Kirchturmuhr_schlaegt_6",
+        "Bild_3_-_Kirchturmuhr_schlaegt_oft",
+        "Bild_3_-_Stadt_Winter",
+        "Bild_4_-_Pferd_Galopp_langsamer",
+        "Bild_4_-_Winter_stuermischer_Wind",
+        "Bild_5_-_Klopfen_1",
+        "Bild_5_-_Klopfen_2",
+        "Bild_5_-_Klopfen_3",
+        "Bild_7_-_Mantel_add-on_M",
+        "Bild_7_-_Mantel_Bewegung",
+        "Bild_7_-_Mantel_zerteilen",
+        "Bild_7_-_Schwert_zuecken",
+        "Raben"
+      ];
 
-        Bild 1 - Pferd Galopp
-        Bild 2 - Pferd schnauben
-        Bild 2 - Pferd wiehern
-        Bild 2 - Winter Wind
-        Bild 3 - Kirchturmuhr laeutet
-        Bild 3 - Kirchturmuhr schlaegt 6
-        Bild 3 - Kirchturmuhr schlaegt oft
-        Bild 3 - Stadt Winter
-        Bild 4 - Pferd Galopp langsamer
-        Bild 4 - Winter stuermischer Wind
-        Bild 5 - Klopfen 1
-        Bild 5 - Klopfen 2
-        Bild 5 - Klopfen 3
-        Bild 7 - Mantel add-on.M
-        Bild 7 - Mantel Bewegung
-        Bild 7 - Mantel zerteilen
-        Bild 7 - Schwert zuecken
-        Raben
-        sounds.forEach(sound => {
+
+      sounds.forEach(sound => {
             const btn = document.createElement('button')
             btn.classList.add('btn')
 
